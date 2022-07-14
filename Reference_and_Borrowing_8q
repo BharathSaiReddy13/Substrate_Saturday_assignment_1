@@ -1,5 +1,5 @@
 //8q
-//we can not borrow mutable as immutable
+//we can not borrow immutable as mutable
 fn main() {
     let  mut s = String::from("hello, ");
 
