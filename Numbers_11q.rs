@@ -9,7 +9,7 @@ fn main() {
     
     assert!(3 * 50 == 150);
 
-    assert!(9 / 3 == 3); // error ! make it work
+    assert!(9.6_f32 / 3.2_f32 == 3.0_f32);
 
     assert!(24 % 5 == 4);
     // Short-circuiting boolean logic
