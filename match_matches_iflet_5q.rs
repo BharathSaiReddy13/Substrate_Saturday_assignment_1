@@ -1,9 +1,18 @@
 //5q
-fn main() {
-    let alphabets = ['a', 'E', 'Z', '0', 'x', '9' , 'Y'];
+enum MyEnum {
+    Foo,
+    Bar
+}
 
-    // fill the blank with `matches!` to make the code work
-    for ab in alphabets {
-        assert!(matches!(ab, 'a'..='z' | 'A'..='Z' | '0'..='9'))
+fn main() {
+    let mut count = 0;
+
+    let v = vec![MyEnum::Foo,MyEnum::Bar,MyEnum::Foo];
+    for e in v {
+        if matches!(e , MyEnum::Foo) { // fix the error with changing only this line
+            count += 1;
+        }
     }
-} 
+
+    assert_eq!(count, 2);
+}
